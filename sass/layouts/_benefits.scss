@@ -1,0 +1,40 @@
+.benefits {
+    display: flex;
+    justify-content: center;
+
+    .item {
+        width: 270px;
+    }
+
+    .item+.item {
+        margin-left: 30px;
+    }
+}
+
+.icon-benefits {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: var(--background-color-secondary);
+}
+
+.icon-size {
+    width: 70px;
+    height: 70px;
+}
+
+.title {
+    @include font(700, 14px, 1.17);
+
+    color: var(--title-color);
+    margin-bottom: 10px;
+}
+
+.text {
+    @include font(400, 14px, 1.7);
+
+    margin: 0;
+}

@@ -1,0 +1,16 @@
+$login-font-family: 'Raleway', sans-serif;
+
+.logo {
+    @include font(700, 26px, 1.2);
+
+    font-family: $login-font-family;
+    color: var(--secondary-color);
+}
+
+.word-studio {
+    color: #000000;
+}
+
+.word-studio-footer {
+    color: #ffffff;
+}
