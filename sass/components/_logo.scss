@@ -1,11 +1,20 @@
 $login-font-family: 'Raleway', sans-serif;
 
 .logo {
-    @include font(700, 26px, 1.2);
-
     font-family: $login-font-family;
     color: var(--secondary-color);
-}
+    @include mobile {
+        @include font(700, 24px, 1.19);
+    }
+    @include tablet {
+        @include font(700, 24px, 1.19);
+    }
+    @include desktop {
+        @include font(700, 26px, 1.2);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}}
 
 .word-studio {
     color: #000000;

@@ -12,24 +12,41 @@
 }
 
 .command {
+    display: block;
+    @include tablet {
+    display: grid;
+    grid-template-columns: 354px 354px;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    -ms-flex-preferred-size: calc((100% - 20px)/2);
+    flex-basis: calc((100% - 20px)/2);
+    }
+    @include desktop {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    }
+    
     &__list {
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
+    border-radius: 0px 0px 4px 4px;
+
+    &:not(:last-child) {
+    @media screen and(max-width: 767px) {
+        margin-bottom: 30px;
+    }
+    @include desktop {
         margin-right: 30px;
-        background-color: #FFFFFF;
-        box-shadow: 0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
-        border-radius: 0px 0px 4px 4px;
     }
-
-    &:last-child {
-        margin-right: 0;
     }
-
+    }
     &__name {
         padding-top: 30px;
-        padding-bottom: 30px;
+        padding-bottom: 24px;
+        @include desktop {
+            padding-bottom: 30px;
+        }
     }
 
     &__title {
@@ -45,5 +62,10 @@
 
         text-align: center;
         margin-bottom: 16px;
+    }
+    &__photo {
+        display: block;
+        width: 100%;
+        height: auto;
     }
 }
