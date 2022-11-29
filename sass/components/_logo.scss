@@ -3,9 +3,7 @@ $login-font-family: 'Raleway', sans-serif;
 .logo {
     font-family: $login-font-family;
     color: var(--secondary-color);
-    @include mobile {
         @include font(700, 24px, 1.19);
-    }
     @include tablet {
         @include font(700, 24px, 1.19);
     }
