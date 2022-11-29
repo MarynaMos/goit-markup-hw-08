@@ -1,19 +1,13 @@
 .portfolio {
-    
     @include tablet {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
     }
-
     &__item {
         border-radius: 0px 0px 4px 4px;
-        
-        @media screen and(max-width: 767px) {
+        @media screen and(min-width: 768px) {
             width: 450px;
-        &:not(:last-child){
-            margin-bottom: 30px;
-        }
         }
         @include tablet {
             margin: 0;
@@ -22,6 +16,11 @@
         @include desktop {
         width: 370px;
         }}
+    &__item:not(:last-child){
+        @media screen and(max-width: 767px) {
+            margin-bottom: 30px;
+        }
+        }
     &__item:nth-child(3n) {
         @include desktop {
         margin-right: 0;
@@ -117,4 +116,3 @@
     color: var(--title-color);
     letter-spacing: 0.06em;
 }
-

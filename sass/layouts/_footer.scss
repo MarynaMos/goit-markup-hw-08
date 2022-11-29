@@ -13,10 +13,8 @@
         margin-right: auto;
     }
     &__address {
-    @include mobile {
     text-align: center;
     margin-bottom: 60px;
-    }
     @include tablet {
         margin: 0;
     }
